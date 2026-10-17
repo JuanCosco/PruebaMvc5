@@ -1,0 +1,33 @@
+﻿@host = https://localhost:44331
+
+### Listar todos
+GET {{host}}/api/ProductosApi
+Accept: application/json
+
+### Obtener uno
+GET {{host}}/api/ProductosApi/1
+Accept: application/json
+
+### Crear
+POST {{host}}/api/ProductosApi
+Content-Type: application/json
+
+{
+  "nombre": "Cuaderno",
+  "precio": 8.50,
+  "stock": 20
+}
+
+### Actualizar
+PUT {{host}}/api/ProductosApi/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nombre": "Lourdes",
+  "precio": 18.00,
+  "stock": 10
+}
+
+### Borrar
+DELETE {{host}}/api/ProductosApi/1
